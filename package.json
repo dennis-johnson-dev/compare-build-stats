@@ -1,0 +1,58 @@
+{
+  "name": "compare-build-stats",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/songawee/compare-build-stats.git",
+  "author": "Dennis Johnson <songawee@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -rf lib",
+    "build": "tsc --project config/tsconfig.server.json",
+    "dev": "./scripts/dev.sh",
+    "start": "./scripts/start.sh",
+    "test": "mocha --opts mocha.opts $(find src/server/__test__ -name '*.ts')",
+    "test:watch": "yarn test -- --watch"
+  },
+  "dependencies": {
+    "@types/chalk": "^0.4.31",
+    "@types/jsonwebtoken": "^7.2.3",
+    "@types/koa": "2.0.39",
+    "@types/koa-bodyparser": "3.0.23",
+    "@types/koa-favicon": "2.0.17",
+    "@types/koa-router": "7.0.22",
+    "@types/moment": "^2.13.0",
+    "@types/request": "^2.0.1",
+    "chalk": "^2.1.0",
+    "jsonwebtoken": "^7.4.2",
+    "koa": "~2.3.0",
+    "koa-bodyparser": "4.2.0",
+    "koa-router": "7.2.1",
+    "moment": "^2.18.1",
+    "nodemon": "1.11.0",
+    "npm-run-all": "4.0.2",
+    "request": "2.81.0",
+    "source-map-support": "0.4.15",
+    "typescript": "2.4.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/chai-as-promised": "0.0.31",
+    "@types/mocha": "^2.2.41",
+    "@types/nock": "^8.2.1",
+    "@types/sinon": "^2.3.2",
+    "@types/sinon-chai": "^2.7.28",
+    "@types/supertest": "^2.0.1",
+    "chai": "^4.0.2",
+    "chai-as-promised": "^7.0.0",
+    "mocha": "^3.4.2",
+    "nock": "^9.0.13",
+    "prettier": "^1.5.2",
+    "sinon": "^2.3.5",
+    "sinon-chai": "^2.11.0",
+    "supertest": "^3.0.0",
+    "ts-node": "^3.0.6"
+  },
+  "engines": {
+    "node": "7.10.1"
+  }
+}
